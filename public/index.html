@@ -13,26 +13,18 @@
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Open+Sans|Quicksand|Raleway" rel="stylesheet">
 <!-- Custom Theme CSS -->
-<%- css('css/layout.css') %>
+<link rel="stylesheet" href="/css/layout.css">
 </head>
 
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">
-            Lauryn D. Brown
-      </a>
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-            <span class="sr-only">Navigation Toggle</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-       </button>
-    </div><!-- Navbar Header -->
-    <div class="collapse navbar-collapse" id="navbar-collapse">
-        <ul class="nav navbar-nav">
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">Lauryn D. Brown</a>
+    <div class="collapse navbar-collapse" id="navbarToggler">
+        <ul class="navbar-nav mr-auto mt-2 mt-md-0">
             
                 <li>
                     <a href="/">
@@ -53,8 +45,7 @@
                 </li>
             
         </ul>
-      </div><!-- navbar collapse -->
-  </div><!-- container-fluid -->
+    </div><!-- navbar collapse -->
 </nav>
 
 
@@ -72,13 +63,9 @@
 </footer>
 
     <!-- Required JavaScript -->
-    <div class="after-footer>
+    <div class="after-footer">
 <!-- JQuery -->
 <script src="/js/jquery-3.1.1.slim.min.js"></script>
-<script
-  src="https://code.jquery.com/jquery-3.1.1.min.js"
-  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-  crossorigin="anonymous"></script>
 <!-- Required for Bootstrap -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
