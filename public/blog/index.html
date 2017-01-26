@@ -29,25 +29,13 @@
     <a class="navbar-brand" href="#">Lauryn D. Brown</a>
     <div class="collapse navbar-collapse" id="navbarToggler">
         <ul class="navbar-nav mr-auto mt-2 mt-md-0">
-            
+            <% for (var menu_item in theme.menu) { %>
                 <li>
-                    <a href="/">
-                    Home
+                    <a href="<%= url_for(theme.menu[menu_item]) %>">
+                    <%= menu_item %>
                     </a>
                 </li>
-            
-                <li>
-                    <a href="/blog">
-                    Blog
-                    </a>
-                </li>
-            
-                <li>
-                    <a href="/archives">
-                    Archives
-                    </a>
-                </li>
-            
+            <% } %>
         </ul>
     </div><!-- navbar collapse -->
 </nav>
