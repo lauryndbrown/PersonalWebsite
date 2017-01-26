@@ -1,4 +1,16 @@
 body {
     font-family: 'Quicksand', sans-serif;
 }
-
+nav{
+    background-color: #1B2631;
+    color:#FFF;
+}
+nav a, nav a:link, nav a:visited, nav a:hover, nav a:active{
+    color:#FFF;
+}
+.navbar-brand{
+    color:#FFF;
+}
+.nav i{
+    color:#FFF;
+}
