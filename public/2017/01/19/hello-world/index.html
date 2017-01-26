@@ -1,67 +1,23 @@
 <!DOCTYPE html>
 <html>
 <!-- Head tag -->
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1"> 
-<meta name="description" content="">
-<meta name="author" content="">
-<link rel="icon" href="favicon/favicon.ico">
-<title>Lauryn D. Brown</title>
-<!-- Bootstrap CSS -->
-<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Open+Sans|Quicksand|Raleway" rel="stylesheet">
-<!-- Font Awesome -->
-<link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
-<!-- Custom Theme CSS -->
-<link rel="stylesheet" href="/css/layout.css">
-</head>
-
+<%- partial('_partial/head') %>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-toggleable-es">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon">
-            <i class="fa fa-bars" aria-hidden="true"></i> 
-        </span>
-    </button>
-    <a class="navbar-brand" href="#">Lauryn D. Brown</a>
-    <div class="collapse navbar-collapse" id="navbarToggler">
-        <ul class="navbar-nav mr-auto mt-2 mt-md-0">
-            <% for (var menu_item in theme.menu) { %>
-                <li>
-                    <a href="<%= url_for(theme.menu[menu_item]) %>">
-                    <%= menu_item %>
-                    </a>
-                </li>
-            <% } %>
-        </ul>
-    </div><!-- navbar collapse -->
-</nav>
-
-
+    <%- partial('_partial/menu') %>
 
     <div class="container">
-        
-            Home
-
-         
+        <% if (page.path.indexOf('archives') > -1) { %>
+            <%- partial('archives') %> 
+        <% } else if (page.path.indexOf('blog') > -1) { %>
+            <%- partial('blog') %> 
+        <% } else { %>
+            <%- partial('home') %>
+        <% } %> 
     </div>
     <!-- Footer -->
-    <footer class="blog-footer">
-    <p>Blog template built by Lauryn D. Brown</p>
-    <p><a href="#">Back to top</a></p>
-</footer>
-
+    <%- partial('_partial/footer') %>
     <!-- Required JavaScript -->
-    <div class="after-footer">
-<!-- JQuery -->
-<script src="/js/jquery-3.1.1.slim.min.js"></script>
-<!-- Required for Bootstrap -->
-<script src="/bootstrap/js/tether.min.js"></script>
-<script src="/bootstrap/js/bootstrap.min.js"></script>
-</div>
-
+    <%- partial('_partial/after-footer') %>
 </body>
 </html>
