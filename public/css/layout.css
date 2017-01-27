@@ -1,5 +1,10 @@
 body {
     font-family: 'Quicksand', sans-serif;
+    height:100%;
+}
+.container{
+    height:100%;
+    width:100%;
 }
 nav, footer{
     background-color: #1C2833;
@@ -16,3 +21,11 @@ span.navbar-toggler-icon i{
     font-size:30px;
 }
 //Footer
+.footer-a, footer a:link, footer a:visited, footer a:hover, footer a:active{
+    color:#F4F6F6 !important;
+}
+.footer{
+    bottom:0;
+    width:100%;
+    overflow:hidden;
+}
