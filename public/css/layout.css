@@ -8,6 +8,9 @@ nav, footer{
 nav a, nav a:link, nav a:visited, nav a:hover, nav a:active{
     color:#F4F6F6;
 }
+footer a, footer a:link, footer a:visited, footer a:hover, footer a:active{
+    color:#F4F6F6;
+}
 .navbar-brand{
     color:#F4F6F6;
 }
@@ -15,9 +18,8 @@ span.navbar-toggler-icon i{
     color:#F4F6F6;
     font-size:30px;
 }
-//Footer
-.footer-a, footer a:link, footer a:visited, footer a:hover, footer a:active{
-    color:#F4F6F6 !important;
+.content{
+    padding: 15px;
 }
 /* Sticky footer styles
 -------------------------------------------------- */
