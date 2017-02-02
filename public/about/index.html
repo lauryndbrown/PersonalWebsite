@@ -9,18 +9,18 @@
 <link rel="icon" href="favicon/favicon.ico">
 <title>Lauryn D. Brown</title>
 <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+<%- css('bootstrap/css/bootstrap.min.css') %>
 <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Raleway:400,600,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway:400,900" rel="stylesheet">
 <!-- Font Awesome -->
-<link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+<%- css('font-awesome/css/font-awesome.min.css') %>
 <!-- Custom Theme CSS -->
-<link rel="stylesheet" href="/css/layout.css">
+<%- css('css/layout.css') %>
 </head>
 
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-toggleable-es">
+    <nav class="navbar navbar-toggleable-es skew">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon">
             <i class="fa fa-bars" aria-hidden="true"></i> 
@@ -72,7 +72,17 @@
             <p class="lead">Lauryn D. Brown<br />Software Engineer</p>
         </div>
         <div class="about-text">
-            <p>Etiam quis viverra lorem, in semper lorem. Sed nisl arcu euismod sit amet nisi euismod sed cursus arcu elementum ipsum arcu vivamus quis venenatis orci lorem ipsum et magna feugiat veroeros aliquam. Lorem ipsum dolor sit amet nullam dolore. </p>
+            <p>I'm Lauryn Brown. Here's a visual representation of my life. For more information, check out my professional links as well.</p>
+            <div>
+                <a href="https://www.linkedin.com/in/lauryndbrown/" class="social-icon">
+                    <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/lauryndbrown" class="social-icon">
+                    <i class="fa fa-github-alt" aria-hidden="true"></i>
+                    <span>Github</span>
+                </a>
+            </div>
         </div>
     </div>
     <div class="col">
@@ -146,6 +156,103 @@
             </div>
         </div>
     
+</div>
+
+</div>
+<div class="row">
+    <h3>Skills I'm Developing</h3>
+     <div class="row projects_grid text-center">
+    
+        <div class="col">
+            <div class="project_description">
+                <h5>Java</h5>
+                <h7>10</h7>
+            </div>
+        </div>
+    
+        <div class="col">
+            <div class="project_description">
+                <h5>Python</h5>
+                <h7>10</h7>
+            </div>
+        </div>
+    
+        <div class="col">
+            <div class="project_description">
+                <h5>Ruby</h5>
+                <h7>10</h7>
+            </div>
+        </div>
+    
+        <div class="col">
+            <div class="project_description">
+                <h5>HTML5</h5>
+                <h7>10</h7>
+            </div>
+        </div>
+    
+</div>
+ <div class="row projects_grid text-center">
+    
+        <div class="col">
+            <div class="project_description">
+                <h5>Django</h5>
+                <h7>10</h7>
+            </div>
+        </div>
+    
+        <div class="col">
+            <div class="project_description">
+                <h5>Ruby on Rails</h5>
+                <h7>10</h7>
+            </div>
+        </div>
+    
+        <div class="col">
+            <div class="project_description">
+                <h5>Bootstrap</h5>
+                <h7>10</h7>
+            </div>
+        </div>
+    
+</div>
+ <div class="row projects_grid text-center">
+    
+        <div class="col">
+            <div class="project_description">
+                <h5>Agile Development</h5>
+                <h7>10</h7>
+            </div>
+        </div>
+    
+        <div class="col">
+            <div class="project_description">
+                <h5>Scrum</h5>
+                <h7>10</h7>
+            </div>
+        </div>
+    
+        <div class="col">
+            <div class="project_description">
+                <h5>Git</h5>
+                <h7>10</h7>
+            </div>
+        </div>
+    
+</div>
+
+</div>
+<div class="row">
+    <h3>Topics I'm Learning About</h3>
+     <div class="row projects_grid text-center">
+    <% theme.skills.languages.forEach(function(language) {  %>
+        <div class="col">
+            <div class="project_description">
+                <h5><%= language.name %></h5>
+                <h7><%= language.level %></h7>
+            </div>
+        </div>
+    <% }); %>
 </div>
 
 </div>

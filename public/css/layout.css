@@ -4,6 +4,20 @@ html, body {
 h3{
     font-weight:900;
 }
+.about-text img{
+    width: 100px;
+    height: 100px;
+}
+
+.about-text .social-icon i {
+    font-size:50px;
+}
+.about-text .social-icon:first-of-type {
+    float:left;
+}
+.about-text .social-icon:last-of-type {
+    float:right;
+}
 .projects_grid .project_description{
     margin:2em;
     margin-top:0.5em;
@@ -14,9 +28,27 @@ h3{
 .projects_grid img{
     
 }
+nav .skew:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: visible;
+  width: 100%;
+  height: 250px;
+  background: #00bcd4;
+  z-index: -1;
+  -webkit-transform: skewY(-2deg);
+  -moz-transform: skewY(-2deg);
+  -ms-transform: skewY(-2deg);
+  -o-transform: skewY(-2deg);
+  transform: skewY(-2deg);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: initial;
+}
 nav, footer{
     font-weight:600;
-    background-color: #1C2833;
+    background-color: #2e3141;//#1C2833;
     color:#F4F6F6;
 }
 nav a, nav a:link, nav a:visited, nav a:hover, nav a:active{
