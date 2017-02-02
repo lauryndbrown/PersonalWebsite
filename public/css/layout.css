@@ -28,23 +28,37 @@ h3{
 .projects_grid img{
     
 }
-nav .skew:before {
-  content: '';
-  position: absolute;
-  left: 0;
+.skew-after-left, .skew-before-left {
+  background: #41ade5;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+.skew-after-left:after {
+  background: inherit;
   bottom: 0;
-  overflow: visible;
-  width: 100%;
-  height: 250px;
-  background: #00bcd4;
+  content: '';
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transform: skewY(-1.5deg);
+  transform-origin: 100%;
   z-index: -1;
-  -webkit-transform: skewY(-2deg);
-  -moz-transform: skewY(-2deg);
-  -ms-transform: skewY(-2deg);
-  -o-transform: skewY(-2deg);
-  transform: skewY(-2deg);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: initial;
+}
+.skew-before-left:before {
+  background: inherit;
+  content: '';
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: skewY(1.5deg);
+  transform-origin: 100% 0;
+  z-index: -1;
 }
 nav, footer{
     font-weight:600;
@@ -70,6 +84,7 @@ span.navbar-toggler-icon i{
 }
 .content{
     padding: 15px;
+    padding-top: 30px;
 }
 /* --------------------------------------------------
  * Footer
@@ -95,8 +110,6 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  line-height: 60px; /* Vertically center the text there */
-  overflow: hidden;
+  min-height: 60px;
+  padding-top:15px;
 }
