@@ -11,7 +11,7 @@
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
 <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Open+Sans|Quicksand|Raleway" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway:400,600,900" rel="stylesheet">
 <!-- Font Awesome -->
 <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
 <!-- Custom Theme CSS -->
@@ -26,19 +26,37 @@
             <i class="fa fa-bars" aria-hidden="true"></i> 
         </span>
     </button>
-    <a class="navbar-brand" href="<%= url_for('home') %>">
+    <a class="navbar-brand" href="/">
         <i class="fa fa-hand-spock-o" aria-hidden="true"></i>
         Lauryn D. Brown
     </a>
     <div class="collapse navbar-collapse" id="navbarToggler">
         <ul class="navbar-nav mr-auto mt-2 mt-md-0">
-            <% for (var menu_item in theme.menu) { %>
+            
                 <li>
-                    <a href="<%= url_for(theme.menu[menu_item]) %>">
-                    <%= menu_item %>
+                    <a href="/">
+                    Home
                     </a>
                 </li>
-            <% } %>
+            
+                <li>
+                    <a href="/about">
+                    About
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/blog">
+                    Blog
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/archives">
+                    Archives
+                    </a>
+                </li>
+            
         </ul>
     </div><!-- navbar collapse -->
 </nav>
@@ -56,27 +74,22 @@
     </div>
     <div class="row">
         <div class="col">
-            <p class="text-center">Etiam quis viverra lorem, in semper lorem. Sed nisl arcu euismod sit amet nisi euismod sed cursus arcu elementum ipsum arcu vivamus quis venenatis orci lorem ipsum et magna feugiat veroeros aliquam. Lorem ipsum dolor sit amet nullam dolore. </p>
+            <p class="text-center">
+                Hi! I'm <a href="#">Lauryn Brown</a>. I'm a Software Engineer living and working in Oklahoma. Checkout the projects I'm working on currently.
+            </p>
         </div>
     </div>
-    <div class="row">
-        <div class="col">
-            <p class="text-center">Project Title</p>
-            <p class="text-center">subtitle</p>
-        </div>
-        <div class="col">
-            <p class="text-center">Project Title</p>
-            <p class="text-center">subtitle</p>
-        </div>
-        <div class="col">
-            <p class="text-center">Project Title</p>
-            <p class="text-center">subtitle</p>
-        </div>
-        <div class="col">
-            <p class="text-center">Project Title</p>
-            <p class="text-center">subtitle</p>
-        </div>
-    </div>
+     <div class="row projects_grid">
+    <% for (var index in site.posts) { %>
+        <% if (index<3) {  %>
+            <div class="col">
+                <p class="text-center"><%= post.title %></p>
+                <p class="text-center"><%= post.subtitle %></p>
+            </div>
+        <% } %>
+    <% } %>
+</div>
+
 </div>
 
          

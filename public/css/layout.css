@@ -1,7 +1,14 @@
 html, body {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Raleway', sans-serif;
+}
+h3{
+    font-weight:900;
+}
+.projects_grid{
+    background-color:grey;
 }
 nav, footer{
+    font-weight:600;
     background-color: #1C2833;
     color:#F4F6F6;
 }
@@ -10,6 +17,10 @@ nav a, nav a:link, nav a:visited, nav a:hover, nav a:active{
 }
 footer a, footer a:link, footer a:visited, footer a:hover, footer a:active{
     color:#F4F6F6;
+}
+footer a:hover, footer a:active, nav a:hover, nav a:active{
+    color:#778899;
+    text-decoration:None;
 }
 .navbar-brand{
     color:#F4F6F6;
@@ -20,6 +31,16 @@ span.navbar-toggler-icon i{
 }
 .content{
     padding: 15px;
+}
+/* --------------------------------------------------
+ * Footer
+-------------------------------------------------- */
+footer .social-icon i, footer .social-icon span{
+    font-size:20px;
+}
+
+footer .social-icon span{
+    margin-right:10px;
 }
 /* Sticky footer styles
 -------------------------------------------------- */

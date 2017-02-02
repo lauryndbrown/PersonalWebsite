@@ -11,7 +11,7 @@
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
 <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Open+Sans|Quicksand|Raleway" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway:400,600,900" rel="stylesheet">
 <!-- Font Awesome -->
 <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
 <!-- Custom Theme CSS -->
@@ -26,19 +26,37 @@
             <i class="fa fa-bars" aria-hidden="true"></i> 
         </span>
     </button>
-    <a class="navbar-brand" href="<%= url_for('home') %>">
+    <a class="navbar-brand" href="/">
         <i class="fa fa-hand-spock-o" aria-hidden="true"></i>
         Lauryn D. Brown
     </a>
     <div class="collapse navbar-collapse" id="navbarToggler">
         <ul class="navbar-nav mr-auto mt-2 mt-md-0">
-            <% for (var menu_item in theme.menu) { %>
+            
                 <li>
-                    <a href="<%= url_for(theme.menu[menu_item]) %>">
-                    <%= menu_item %>
+                    <a href="/">
+                    Home
                     </a>
                 </li>
-            <% } %>
+            
+                <li>
+                    <a href="/about">
+                    About
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/blog">
+                    Blog
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/archives">
+                    Archives
+                    </a>
+                </li>
+            
         </ul>
     </div><!-- navbar collapse -->
 </nav>
@@ -49,11 +67,25 @@
         
             <div class="row">
     <div class="col text-center">
-        <h1>About Me!</h1>
-        <p class="lead">Lauryn D. Brown<br />Software Engineer</p>
-        <p>Etiam quis viverra lorem, in semper lorem. Sed nisl arcu euismod sit amet nisi euismod sed cursus arcu elementum ipsum arcu vivamus quis venenatis orci lorem ipsum et magna feugiat veroeros aliquam. Lorem ipsum dolor sit amet nullam dolore. </p>
-        <i class="fa fa-github-alt" aria-hidden="true"></i>
-        <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+        <div class="about-header">
+            <h1>About Me!</h1>
+            <p class="lead">Lauryn D. Brown<br />Software Engineer</p>
+        </div>
+        <div class="about-text">
+            <p>Etiam quis viverra lorem, in semper lorem. Sed nisl arcu euismod sit amet nisi euismod sed cursus arcu elementum ipsum arcu vivamus quis venenatis orci lorem ipsum et magna feugiat veroeros aliquam. Lorem ipsum dolor sit amet nullam dolore. </p>
+        </div>
+        <div>
+             <div class="row projects_grid">
+    <% theme.featured_projects.each(function(project) {  %>
+        <div class="col">
+            <p class="text-center"><%= project.title %></p>
+            <p class="text-center"><%= project.subtitle %></p>
+            <img src="<%= project.image_path %>" alt="Placeholder">
+        </div>
+    <% }); %>
+</div>
+
+        </div>
     </div>
     <div class="col">
         <img class="about_img" src="profile.jpg" alt="Lauryn Brown">
