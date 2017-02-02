@@ -9,13 +9,13 @@
 <link rel="icon" href="favicon/favicon.ico">
 <title>Lauryn D. Brown</title>
 <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+<%- css('bootstrap/css/bootstrap.min.css') %>
 <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Raleway:400,600,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway:400,900" rel="stylesheet">
 <!-- Font Awesome -->
-<link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+<%- css('font-awesome/css/font-awesome.min.css') %>
 <!-- Custom Theme CSS -->
-<link rel="stylesheet" href="/css/layout.css">
+<%- css('css/layout.css') %>
 </head>
 
 <body>
@@ -68,26 +68,51 @@
             <div class="container-fluid">
     <div class="row">
         <div class="col">
-            <h3 class="text-center">Home</h3>
-            <p class="lead text-center">This is Home</p>
+            <h3 class="text-center">Lauryn Brown</h3>
+            <p class="lead text-center">Software Engineer</p>
         </div>
     </div>
     <div class="row">
         <div class="col">
             <p class="text-center">
-                Hi! I'm <a href="#">Lauryn Brown</a>. I'm a Software Engineer living and working in Oklahoma. Checkout the projects I'm working on currently.
+                I'm a Software Engineer living and working in Oklahoma. <br /> Checkout the projects I'm working on currently.
             </p>
         </div>
     </div>
-     <div class="row projects_grid">
-    <% for (var index in site.posts) { %>
-        <% if (index<3) {  %>
-            <div class="col">
-                <p class="text-center"><%= post.title %></p>
-                <p class="text-center"><%= post.subtitle %></p>
+     <div class="row projects_grid text-center">
+    
+        <div class="col">
+            <img src="placeholder.png" alt="Placeholder" class="rounded">
+            <div class="project_description">
+                <h5>Linear Algebra</h5>
+                <h7>Small Linear Algebra Library based on Exercises from Udacity&#39;s Linear Algebra Refresher Course</h7>
             </div>
-        <% } %>
-    <% } %>
+        </div>
+    
+        <div class="col">
+            <img src="placeholder.png" alt="Placeholder" class="rounded">
+            <div class="project_description">
+                <h5>ASCII Civ</h5>
+                <h7>Small Python ASCII based Civ-like Game</h7>
+            </div>
+        </div>
+    
+        <div class="col">
+            <img src="placeholder.png" alt="Placeholder" class="rounded">
+            <div class="project_description">
+                <h5>Python Exercism</h5>
+                <h7>Python exercises from exercism.io</h7>
+            </div>
+        </div>
+    
+        <div class="col">
+            <img src="placeholder.png" alt="Placeholder" class="rounded">
+            <div class="project_description">
+                <h5>Python Exercism</h5>
+                <h7>Python exercises from exercism.io</h7>
+            </div>
+        </div>
+    
 </div>
 
 </div>

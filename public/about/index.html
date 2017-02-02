@@ -9,13 +9,13 @@
 <link rel="icon" href="favicon/favicon.ico">
 <title>Lauryn D. Brown</title>
 <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+<%- css('bootstrap/css/bootstrap.min.css') %>
 <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Raleway:400,600,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway:400,900" rel="stylesheet">
 <!-- Font Awesome -->
-<link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+<%- css('font-awesome/css/font-awesome.min.css') %>
 <!-- Custom Theme CSS -->
-<link rel="stylesheet" href="/css/layout.css">
+<%- css('css/layout.css') %>
 </head>
 
 <body>
@@ -74,22 +74,48 @@
         <div class="about-text">
             <p>Etiam quis viverra lorem, in semper lorem. Sed nisl arcu euismod sit amet nisi euismod sed cursus arcu elementum ipsum arcu vivamus quis venenatis orci lorem ipsum et magna feugiat veroeros aliquam. Lorem ipsum dolor sit amet nullam dolore. </p>
         </div>
-        <div>
-             <div class="row projects_grid">
-    <% theme.featured_projects.each(function(project) {  %>
-        <div class="col">
-            <p class="text-center"><%= project.title %></p>
-            <p class="text-center"><%= project.subtitle %></p>
-            <img src="<%= project.image_path %>" alt="Placeholder">
-        </div>
-    <% }); %>
-</div>
-
-        </div>
     </div>
     <div class="col">
         <img class="about_img" src="profile.jpg" alt="Lauryn Brown">
     </div>
+</div>
+<div class="row">
+     <div class="row projects_grid text-center">
+    
+        <div class="col">
+            <img src="placeholder.png" alt="Placeholder" class="rounded">
+            <div class="project_description">
+                <h5>MasterCard</h5>
+                <h7>Software Engineering Intern</h7>
+            </div>
+        </div>
+    
+        <div class="col">
+            <img src="placeholder.png" alt="Placeholder" class="rounded">
+            <div class="project_description">
+                <h5>Boeing</h5>
+                <h7>Program Manager Intern</h7>
+            </div>
+        </div>
+    
+        <div class="col">
+            <img src="placeholder.png" alt="Placeholder" class="rounded">
+            <div class="project_description">
+                <h5>Boeing</h5>
+                <h7>Software Architect Intern</h7>
+            </div>
+        </div>
+    
+        <div class="col">
+            <img src="placeholder.png" alt="Placeholder" class="rounded">
+            <div class="project_description">
+                <h5>Carnegie Mellon University</h5>
+                <h7>Student Research Scholar</h7>
+            </div>
+        </div>
+    
+</div>
+
 </div>
  
          
