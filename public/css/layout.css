@@ -1,8 +1,20 @@
 html, body {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    color:#3D3C3A;
+    
 }
 h3{
-    font-weight:900;
+    font-family: 'Ultra', serif;
+    font-size:60px;
+    color:#ABABAB;
+    background-color:#2D2D2D;
+}
+.lead{
+    font-size:30px;
+}
+
+.margin-after{
+    margin-bottom:1em;
 }
 .about-text img{
     width: 100px;
@@ -83,8 +95,8 @@ span.navbar-toggler-icon i{
     font-size:30px;
 }
 .content{
-    padding: 15px;
-    padding-top: 30px;
+    padding-top: 3em;
+    padding-bottom: 5em;
 }
 /* --------------------------------------------------
  * Footer
