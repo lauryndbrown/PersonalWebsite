@@ -1,25 +1,159 @@
 <!DOCTYPE html>
 <html>
 <!-- Head tag -->
-<%- partial('_partial/_layout/head') %>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="favicon/favicon.ico">
+<title>Lauryn D. Brown</title>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Raleway:300,600,900" rel="stylesheet">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+<!-- Custom Theme CSS -->
+<link rel="stylesheet" href="/css/layout.css">
+</head>
+
 <body>
     <!-- Navigation -->
-    <%- partial('_partial/_layout/menu') %>
+    <nav class="navbar navbar-toggleable-es fixed-top navbar-light bg-faded">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">
+            <i class="fa fa-bars" aria-hidden="true"></i> 
+        </span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarToggler">
+        <ul class="navbar-nav mr-auto mt-2 mt-md-0 text-center">
+            
+                <li>
+                    <a href="/">
+                    Home
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/about">
+                    About
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/blog">
+                    Blog
+                    </a>
+                </li>
+            
+        </ul>
+    </div><!-- navbar collapse -->
+</nav>
 
-    <div class="container content">
-        <% if (page.path.indexOf('archives') > -1) { %>
-            <%- partial('_partial/_content/archives') %> 
-        <% } else if (page.path.indexOf('blog') > -1) { %>
-            <%- partial('_partial/_content/blog') %> 
-        <% } else if (page.path.indexOf('about') > -1) { %>
-            <%- partial('_partial/_content/about') %> 
-        <% } else { %>
-            <%- partial('_partial/_content/home') %>
-        <% } %> 
+
+
+    <div class="container-fluid content">
+        
+                <div class="row about section skew-after-right">
+        <div class="col">
+            <h3>About Me!</h3>
+            <hr />
+            <h4>Lauryn Brown</h4>
+        </div>
+    </div>
+<div class="row about-section skew-after-left">
+    <div class="col-sm-6 text-center margin-after">
+        <div class="about-header">
+            <h3>Lauryn D. Brown<br />Software Engineer</h3>
+        </div>
+        <div class="about-text">
+            <p class="lead">I'm Lauryn Brown. Here's a short summary of me. check out my professional links as well.</p>
+            <div>
+                <a href="https://www.linkedin.com/in/lauryndbrown/" class="social-icon">
+                    <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                    <br />
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/lauryndbrown" class="social-icon">
+                    <i class="fa fa-github-alt" aria-hidden="true"></i>
+                    <br />
+                    <span>Github</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 text-center">
+        <img class="about_img img-fluid" src="profile.jpg" alt="Lauryn Brown">
+    </div>
+</div>
+    <div class="row about-section-details skew-after-right text-center">
+        <div class="col">
+            <h3>Education</h3>
+            <hr />
+            <ul>
+                <li>Carnegie Mellon University</li>
+            </ul>
+        </div>
+        <div class="col">
+            <h3>Experience</h3>
+            <hr />
+            <ul>
+                <li>The Boeing Company</li>
+                <li>MasterCard Worldwide</li>
+            </ul>
+        </div>
+        <div class="col">
+            <h3>Skills</h3>
+            <hr />
+            <ul>
+                <li>Java</li>
+                <li>Python</li>
+            </ul>
+        </div>
+        <div class="col">
+            <h3>Interests</h3>
+            <hr />
+            <ul>
+                <li>Beginning Spanish</li>
+                <li>Beginning Violin</li>
+                <li>Web & Game Development</li>
+                <li>Artificial Intelligence</li>
+            </ul>
+        </div>
+    </div>
+</div>
+ 
+         
     </div>
     <!-- Footer -->
-    <%- partial('_partial/_layout/footer') %>
+    <footer class="footer skew-before-left">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-center">
+                <a href="https://www.linkedin.com/in/lauryndbrown/" class="social-icon">
+                    <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/lauryndbrown" class="social-icon">
+                    <i class="fa fa-github-alt" aria-hidden="true"></i>
+                    <span>Github</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
     <!-- Required JavaScript -->
-    <%- partial('_partial/_layout/after-footer') %>
+    <div class="after-footer">
+<!-- JQuery -->
+<script src="/js/jquery-3.1.1.slim.min.js"></script>
+<!-- Required for Bootstrap -->
+<script src="/bootstrap/js/tether.min.js"></script>
+<script src="/bootstrap/js/bootstrap.min.js"></script>
+<!-- Custom Js -->
+<script src="/js/layout.js"></script>
+</div>
+
 </body>
 </html>
