@@ -63,49 +63,17 @@
         </div>
     </div>
 <div class="row section">
+<h3>Welcome to my Blog!</h3>
 <!-- Blog Header: title and subtitle -->
-<div class="blog-header">
-    <h1 class="blog-title">
-        Lauryn D. Brown
-    </h1>
-    <p class="lead blog-description">
-        
-            Software Engineer
-        
-    </p>
-</div>
-
+<%- partial('_partial/_content/blog-header') %>
 <div class="row">
     <!-- Main Content -->
     <div class="col-sm-8 blog-main">
-        <span>Hello World</span>
-
+        <%- body %>
     </div>
     <!-- Sidebar -->
     <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
-        <div class="sidebar-module sidebar-module-inset">
-    <h4>About</h4>
-    <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-</div>
-<div class="sidebar-module">
-    <h4>Archives</h4>
-    <ol class="list-unstyled">
-        <li><a href="#">March 2014</a></li>
-        <li><a href="#">February 2014</a></li>
-        <li><a href="#">January 2014</a></li>
-        <li><a href="#">December 2013</a></li>
-        <li><a href="#">November 2013</a></li>
-    </ol>
-</div>
-<div class="sidebar-module">
-    <h4>Elsewhere</h4>
-    <ol class="list-unstyled">
-        <li><a href="#">GitHub</a></li>
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">Facebook</a></li>
-    </ol>
-</div>
-
+        <%- partial('_partial/_content/sidebar') %>
     </div>
  </div>
  </div>
@@ -116,7 +84,7 @@
     <footer class="footer skew-before-left">
     <div class="container-fluid">
         <div class="row">
-            <div class="col text-center">
+            <div class="col text-right">
                 <a href="https://www.linkedin.com/in/lauryndbrown/" class="social-icon">
                     <i class="fa fa-linkedin-square" aria-hidden="true"></i>
                     <span>LinkedIn</span>
@@ -133,12 +101,10 @@
     <!-- Required JavaScript -->
     <div class="after-footer">
 <!-- JQuery -->
-<script src="/personalWebsite/js/jquery-3.1.1.slim.min.js"></script>
+<%- js('js/jquery-3.1.1.slim.min.js') %>
 <!-- Required for Bootstrap -->
-<script src="/personalWebsite/bootstrap/js/tether.min.js"></script>
-<script src="/personalWebsite/bootstrap/js/bootstrap.min.js"></script>
-<!-- Custom Js -->
-<script src="/personalWebsite/js/layout.js"></script>
+<%- js('bootstrap/js/tether.min.js') %>
+<%- js('bootstrap/js/bootstrap.min.js') %>
 </div>
 
 </body>
