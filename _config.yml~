@@ -70,4 +70,3 @@ theme: hexo-personal-theme
 deploy:
   type: git
   repo: git@github.com:lauryndbrown/personalWebsite.git
-  #repo: https://github.com/lauryndbrown/personalWebsite.git        
