@@ -9,14 +9,13 @@
 <link rel="icon" href="favicon/favicon.ico">
 <title>Lauryn D. Brown</title>
 <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+<%- css('bootstrap/css/bootstrap.min.css') %>
 <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Open+Sans|Ultra" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Lato:400,300,100,200|Open+Sans|Ultra" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway:300,900" rel="stylesheet">
 <!-- Font Awesome -->
-<link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+<%- css('font-awesome/css/font-awesome.min.css') %>
 <!-- Custom Theme CSS -->
-<link rel="stylesheet" href="/css/layout.css">
+<%- css('css/layout.css') %>
 </head>
 
 <body>
@@ -48,12 +47,6 @@
                     </a>
                 </li>
             
-                <li>
-                    <a href="/archives">
-                    Archives
-                    </a>
-                </li>
-            
         </ul>
     </div><!-- navbar collapse -->
 </nav>
@@ -62,21 +55,29 @@
 
     <div class="container-fluid content">
         
-            <div class="row">
+                <div class="row about section skew-after-right">
+        <div class="col">
+            <h3>About Me!</h3>
+            <hr />
+            <h4>Lauryn Brown</h4>
+        </div>
+    </div>
+<div class="row about-section skew-after-left">
     <div class="col-sm-6 text-center margin-after">
         <div class="about-header">
-            <h1>About Me!</h1>
-            <p class="lead">Lauryn D. Brown<br />Software Engineer</p>
+            <h3>Lauryn D. Brown<br />Software Engineer</h3>
         </div>
         <div class="about-text">
-            <p>I'm Lauryn Brown. Here's a short summary of me. check out my professional links as well.</p>
+            <p class="lead">I'm Lauryn Brown. Here's a short summary of me. Check out my professional links as well.</p>
             <div>
                 <a href="https://www.linkedin.com/in/lauryndbrown/" class="social-icon">
                     <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                    <br />
                     <span>LinkedIn</span>
                 </a>
                 <a href="https://github.com/lauryndbrown" class="social-icon">
                     <i class="fa fa-github-alt" aria-hidden="true"></i>
+                    <br />
                     <span>Github</span>
                 </a>
             </div>
@@ -86,40 +87,38 @@
         <img class="about_img img-fluid" src="profile.jpg" alt="Lauryn Brown">
     </div>
 </div>
-    <div class="row">`
-        <div class="col">`
+    <div class="row about-section-details skew-after-right text-center">
+        <div class="col">
             <h3>Education</h3>
+            <hr />
             <ul>
                 <li>Carnegie Mellon University</li>
             </ul>
         </div>
-        <div class="col">`
+        <div class="col">
             <h3>Experience</h3>
+            <hr />
             <ul>
                 <li>The Boeing Company</li>
                 <li>MasterCard Worldwide</li>
             </ul>
         </div>
-        <div class="col">`
-            <h3>Topics</h3>
-            <ul>
-                <li>Web Development</li>
-                <li>Game Development</li>
-                <li>Artificial Intelligence</li>
-            </ul>
-        </div>
-        <div class="col">`
+        <div class="col">
             <h3>Skills</h3>
+            <hr />
             <ul>
                 <li>Java</li>
                 <li>Python</li>
             </ul>
         </div>
-        <div class="col">`
+        <div class="col">
             <h3>Interests</h3>
+            <hr />
             <ul>
                 <li>Beginning Spanish</li>
                 <li>Beginning Violin</li>
+                <li>Web & Game Development</li>
+                <li>Artificial Intelligence</li>
             </ul>
         </div>
     </div>
@@ -131,10 +130,7 @@
     <footer class="footer skew-before-left">
     <div class="container-fluid">
         <div class="row">
-            <div class="col">
-                <p>Blog template built by Lauryn D. Brown</p>
-            </div>
-            <div class="col text-right">
+            <div class="col text-center">
                 <a href="https://www.linkedin.com/in/lauryndbrown/" class="social-icon">
                     <i class="fa fa-linkedin-square" aria-hidden="true"></i>
                     <span>LinkedIn</span>
@@ -151,10 +147,12 @@
     <!-- Required JavaScript -->
     <div class="after-footer">
 <!-- JQuery -->
-<%- js('js/jquery-3.1.1.slim.min.js') %>
+<script src="/js/jquery-3.1.1.slim.min.js"></script>
 <!-- Required for Bootstrap -->
-<%- js('bootstrap/js/tether.min.js') %>
-<%- js('bootstrap/js/bootstrap.min.js') %>
+<script src="/bootstrap/js/tether.min.js"></script>
+<script src="/bootstrap/js/bootstrap.min.js"></script>
+<!-- Custom Js -->
+<script src="/js/layout.js"></script>
 </div>
 
 </body>
