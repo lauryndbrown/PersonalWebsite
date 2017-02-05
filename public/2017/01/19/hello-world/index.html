@@ -3,19 +3,19 @@
 <!-- Head tag -->
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="icon" href="favicon/favicon.ico">
 <title>Lauryn D. Brown</title>
 <!-- Bootstrap CSS -->
-<%- css('bootstrap/css/bootstrap.min.css') %>
+<link rel="stylesheet" href="/personalWebsite/bootstrap/css/bootstrap.min.css">
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Raleway:300,600,900" rel="stylesheet">
 <!-- Font Awesome -->
-<%- css('font-awesome/css/font-awesome.min.css') %>
+<link rel="stylesheet" href="/personalWebsite/font-awesome/css/font-awesome.min.css">
 <!-- Custom Theme CSS -->
-<%- css('css/layout.css') %>
+<link rel="stylesheet" href="/personalWebsite/css/layout.css">
 </head>
 
 <body>
@@ -26,19 +26,27 @@
             <i class="fa fa-bars" aria-hidden="true"></i> 
         </span>
     </button>
-    <span class="navbar-brand" >
-        <i class="fa fa-hand-spock-o" aria-hidden="true"></i>
-        Lauryn D. Brown
-    </span>
     <div class="collapse navbar-collapse" id="navbarToggler">
         <ul class="navbar-nav mr-auto mt-2 mt-md-0 text-center">
-            <% for (var menu_item in theme.menu) { %>
+            
                 <li>
-                    <a href="<%= url_for(theme.menu[menu_item]) %>">
-                    <%= menu_item %>
+                    <a href="/personalWebsite/">
+                    Home
                     </a>
                 </li>
-            <% } %>
+            
+                <li>
+                    <a href="/personalWebsite/about">
+                    About
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/personalWebsite/blog">
+                    Blog
+                    </a>
+                </li>
+            
         </ul>
     </div><!-- navbar collapse -->
 </nav>
@@ -126,7 +134,7 @@
     <footer class="footer skew-before-left">
     <div class="container-fluid">
         <div class="row">
-            <div class="col text-right">
+            <div class="col text-center">
                 <a href="https://www.linkedin.com/in/lauryndbrown/" class="social-icon">
                     <i class="fa fa-linkedin-square" aria-hidden="true"></i>
                     <span>LinkedIn</span>
@@ -143,12 +151,10 @@
     <!-- Required JavaScript -->
     <div class="after-footer">
 <!-- JQuery -->
-<script src="/personalWebsite/js/jquery-3.1.1.slim.min.js"></script>
+<%- js('js/jquery-3.1.1.slim.min.js') %>
 <!-- Required for Bootstrap -->
-<script src="/personalWebsite/bootstrap/js/tether.min.js"></script>
-<script src="/personalWebsite/bootstrap/js/bootstrap.min.js"></script>
-<!-- Custom Js -->
-<script src="/personalWebsite/js/layout.js"></script>
+<%- js('bootstrap/js/tether.min.js') %>
+<%- js('bootstrap/js/bootstrap.min.js') %>
 </div>
 
 </body>
