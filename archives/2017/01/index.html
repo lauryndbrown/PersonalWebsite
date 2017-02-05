@@ -9,13 +9,13 @@
 <link rel="icon" href="favicon/favicon.ico">
 <title>Lauryn D. Brown</title>
 <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+<%- css('bootstrap/css/bootstrap.min.css') %>
 <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Raleway:300,600,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway:300,900" rel="stylesheet">
 <!-- Font Awesome -->
-<link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+<%- css('font-awesome/css/font-awesome.min.css') %>
 <!-- Custom Theme CSS -->
-<link rel="stylesheet" href="/css/layout.css">
+<%- css('css/layout.css') %>
 </head>
 
 <body>
@@ -80,10 +80,12 @@
     <!-- Required JavaScript -->
     <div class="after-footer">
 <!-- JQuery -->
-<%- js('js/jquery-3.1.1.slim.min.js') %>
+<script src="/js/jquery-3.1.1.slim.min.js"></script>
 <!-- Required for Bootstrap -->
-<%- js('bootstrap/js/tether.min.js') %>
-<%- js('bootstrap/js/bootstrap.min.js') %>
+<script src="/bootstrap/js/tether.min.js"></script>
+<script src="/bootstrap/js/bootstrap.min.js"></script>
+<!-- Custom Js -->
+<script src="/js/layout.js"></script>
 </div>
 
 </body>
