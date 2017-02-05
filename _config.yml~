@@ -69,4 +69,5 @@ theme: hexo-personal-theme
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/lauryndbrown/personalWebsite.git        
+  repo: git@github.com:lauryndbrown/personalWebsite.git
+  #repo: https://github.com/lauryndbrown/personalWebsite.git        
